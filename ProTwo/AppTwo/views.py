@@ -3,5 +3,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    
-    return HttpResponse("<em>My Second App<em>")
+    my_dict={'insert_me':"Now I am comming from App Two Hello I am from views.py!"}
+    return render(request,'AppTwo/index.html',context=my_dict)

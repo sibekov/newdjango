@@ -11,9 +11,11 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+TEMPLATE_DIR =os.path.join(BASE_DIR,"templates")
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +27,7 @@ SECRET_KEY = 'django-insecure-z)*2o-l(@t_h5!&!#t0y@u%w+wci_r6e9n#_mfu8bsww4f(-h2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-sibekov-newdjango-50zh16xmj6a.ws-eu117.gitpod.io']
+ALLOWED_HOSTS = ['8000-sibekov-newdjango-50zh16xmj6a.ws-eu117.gitpod.io',]
 
 
 # Application definition
@@ -55,7 +57,7 @@ ROOT_URLCONF = 'ProTwo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_DIR,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
